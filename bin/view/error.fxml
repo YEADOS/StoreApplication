@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      alignment="center"
+      styleClass="background" spacing="10" prefHeight="300.0" prefWidth="350.0"
+      fx:controller="controller.ErrorController">
+      <Label text="From Validation Errors"/>
+      <Label fx:id="errorsLb"/>
+      <Button fx:id="okBtn" text="Okay" onAction="#handleOkay"/>
+
+      <stylesheets>
+        <URL value="@mmsfx.css"/>
+      </stylesheets>
+
+
+</VBox>
+

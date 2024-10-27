@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+
+<!-- <Label text="Membership Slip:"/> -->
+<VBox fx:id="test" prefHeight="338.0" prefWidth="550.0" styleClass="background" 
+          xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="controller.MMSlipController">
+
+        
+    <padding>
+        <Insets top="55" bottom="10" left="10" right="10" />
+    </padding>
+    <!-- <HBox>
+    </HBox> -->
+
+
+    <GridPane alignment="center">
+    
+        <!-- <padding>
+            <Insets top="10" bottom="10" left="10" right="10" />
+        </padding> -->
+        <Label text="Membership Slip:" styleClass="label-h2" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+        <!--<Label textAlignment="LEFT" text="Membership Slip" styleClass="label-header" GridPane.columnIndex="0" GridPane.rowIndex="0"/>-->
+        <Label text="Total Credits:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Total Expense:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Gasdeduction Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Pay Per Credit:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label text="Dollar Available:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label text="Deduction Rate:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        
+        <Label fx:id="creditsLb" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label fx:id="expenseLb" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label fx:id="gasLb" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label fx:id="payperLb" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Label fx:id="dollarLb" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <Label fx:id="deductLb" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" percentWidth="45.0" prefWidth="45.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" percentWidth="45.0" prefWidth="45.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+        </columnConstraints>
+    </GridPane>
+
+
+
+    <VBox alignment="center">
+        <padding>
+            <Insets top="50" bottom="10" left="10" right="10" />
+        </padding>
+        <Button text="Close" onAction="#closeWindow"/> 
+    </VBox>
+
+    
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+    
+</VBox>
+

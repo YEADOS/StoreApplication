@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+
+
+
+
+<VBox styleClass="background" prefHeight="300.0" prefWidth="700.0" spacing="100" 
+      xmlns:fx="http://javafx.com/fxml/1" alignment="center"
+      fx:controller="controller.SessionController">
+      <!-- <GridPane fx:controller="SessionController"
+                alignment="center" hgap="10" vgap="10">  -->
+        <ImageView fitHeight="235.8" fitWidth="437.4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Image fx:id="imageLogo" url="view/loGo.png">
+            </Image>
+        </ImageView>
+        <VBox spacing="5" alignment="center">
+            <Label fx:id="textMMS" text="Membership Management System" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="2" alignment="center" spacing="50"> 
+                <Button text="Login" onAction="#handleLogin"/>
+                <Button text="Exit" onAction="#handleExit"/>
+            </HBox> 
+        </VBox>
+      <!-- </GridPane> -->
+
+    <!-- <Label text="SuperMarket" styleClass="label-header"/> -->
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+
+</VBox>

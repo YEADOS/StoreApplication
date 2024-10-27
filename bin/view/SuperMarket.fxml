@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      spacing="10" styleClass="background" prefHeight="500.0" prefWidth="700.0"
+      fx:controller="controller.SuperMarketController">
+      <Label fx:id="headerLabel" text="Filters" styleClass="label-header" textAlignment="RIGHT"/>
+
+      <HBox spacing="10" alignment="center"> 
+            <Label text="Name:"/>
+            <TextField fx:id="nameFilterTf" />
+            <Label text="Email:"/>
+            <TextField fx:id="emailFilterTf"/> 
+      </HBox>
+      
+      <TableView fx:id="membershipsTv">
+            <placeholder><Label text="Memberships list is not loaded"/></placeholder>
+            <columns>
+                  <TableColumn fx:id="nameCol" text="Name"/>
+                  <TableColumn fx:id="emailCol" text="Email"/>
+                  <TableColumn fx:id="phoneCol" text="Phone"/>
+            </columns>
+      </TableView>
+
+      <HBox spacing="10" alignment="center">
+            <padding>
+                  <Insets top="10" bottom="10" left="10" right="10" />
+            </padding>
+            <Button fx:id="addMemberBtn" text="Add" onAction="#addMember"/>
+            <Button disable="true" fx:id="deleteMemberBtn" text="Delete" onAction="#deleteMember"/>
+            <Button disable="true" fx:id="selectMemberBtn" text="Select" onAction="#selectMember"/>
+            <Button disable="true" fx:id="slipMemberBtn" text="SLIP" onAction="#slipMember"/>
+            <Button text="Report" fx:id="reportBtn" onAction="#report" />
+            <Button text="Close" onAction="#closeTab" />
+      </HBox>
+
+
+      <stylesheets>
+            <URL value="@mmsfx.css"/>
+      </stylesheets>
+
+</VBox>
